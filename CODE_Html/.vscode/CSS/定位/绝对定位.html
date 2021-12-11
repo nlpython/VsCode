@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #outer {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            margin-left: 300px;
+            position: relative;      /* 背景相对定位, 使绝对定位相对于父级节点移动  */
+        }
+        #div01 {
+            width: 100px;
+            height: 100px;
+            background-color: cornflowerblue;
+            /* 相对于body的位置(最底层) */
+            /* 当一个元素设置了绝对定位的时候, 它会向上一层一层寻找父级节点是否有定位, 如果直到找到了body也没有, 那么
+            就相对于body进行变化. 如果父级节点有定位(绝对定位, 相对定位, 固定定位), 但是一般我们会配合使用父级为相对
+            定位, 当前元素为绝对定位, 这样这个元素就会相对父级位置产生变化, 且都会释放原来的位置, 其他元素会占用该位置 */
+            position: absolute;
+            left: 30px;
+            top: 50px;
+        }
+        #div02 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(109, 255, 80);
+        }
+    </style>
+</head>
+    <body>
+        <div id="outer">
+            <div id="div01">111</div>
+            <div id="div02">222</div>
+        </div>
+    </body>
+</html>

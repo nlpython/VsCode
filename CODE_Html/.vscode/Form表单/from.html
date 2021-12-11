@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="lang">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <!--
+            form表单
+            表单元素:
+            1.文本框:
+                input标签使用很广泛, 通过type属性的不同值, 来表现不同的形态.
+                type="text"  文本框, 内容可见
+                表单元素必须有一个属性: name, 有了name才可以提交数据
+                value: 如果提前写好, 那么文本框中默认效果就事value的内容
+                一般默认提示语用 placeholder 
+                readonly只读, 不能修改, 可以正常提交
+                disabled禁用, 完全不可用, 不能正常提交
+                写法: readonly="true" or readonly or readonly="readonly"
+            2.单选按钮
+                注意: 一组单选按纽, 必须通过name属性控制在一个分组里, 然后一个分组只能选择一个
+                正常情况下, 提交数据为gender(自定义名称)=on, 后台不能区分提交的数据
+                checked 默认选中
+            3.多选按钮
+            4.隐藏域
+        -->    
+        <form action="aaaa" method="POST">
+            用户名:<input type="text" name="username" placeholder="用户名"/> <br />
+            密&emsp;码:<input type="password" name="password"/> <br />
+        
+            <!--性别-->
+            性别:
+            <input type="radio" name="gender" value="1" checked/>男
+            <input type="radio" name="gender" value="0"/>女
+            <!--喜欢的语言-->
+            <input type="checkbox" name="favlan" value="1"/>Java
+            <input type="checkbox" name="favlan" value="2"/>C++
+            <input type="checkbox" name="favlan" value="3"/>Python
+            <br/>
+            <!--隐藏域-->
+            <input type="hidden" name="uname6" value="123123" />
+            <!--文件-->
+            <input type="file" value="选择插入文件" />
+            <!--普通按钮-->
+            <input type="button" value="普通按钮" />
+            <!--特殊按钮, 将页面恢复到初始状态-->
+            <input type="reset" />
+            <!--图片按钮-->
+            <input type="image" src="C:\Codefield\CODE_Html\.vscode\img\pricture.jpg" />
+            <!--下拉列表
+                selected默认选中
+                multiple可多选
+            -->
+            <select name="city">
+                <option value="0" selected>请选择</option>
+                <option value="1">哈尔滨</option>
+                <option value="2">武汉</option>
+                <option value="3">南京</option>
+                <option value="4">杭州</option>
+                <option value="5">深圳</option>
+            </select>
+            <br />
+            <!--多行文本框-->
+            自我介绍
+            <textarea style="resize: none;" rows="10" cols="30" >请在这里填写信息</textarea>
+            <!--label标签-->
+            <label for="uname">用户名: </label>
+            <input type="text" name="uername" id="uname" />
+
+            <!--提交按钮-->
+            <input type="submit" />
+        </form>
+    </body>
+</html>

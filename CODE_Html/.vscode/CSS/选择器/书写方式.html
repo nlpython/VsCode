@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+        书写方式2: 内部样式
+        head标签中加入一个style标签, 在里面定位到需要修饰的元素, 在{}中加入要修饰的样式.
+    -->
+    <style type="text/CSS">
+        h2 {
+            color: aqua;
+        }
+    </style>
+
+    <!--
+        书写方式3: 外部样式
+        引入外部css资源: link
+    -->
+    <link rel="stylesheet" type="text/CSS" href="myStyle.css" />
+
+</head>
+    <body>
+        <!--
+            书写方式1: 内联样式(行内样式)
+            在标签中加入一个style属性, CSS的样式作为属性值
+        -->
+        <h1 style="color: rgb(0, 195, 255);">这是一个h1标题</h1>
+        <h2>这是一个h2标题</h2>
+        <h3>这是一个h3标题</h3>
+    </body>
+</html>

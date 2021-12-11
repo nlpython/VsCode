@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body> 
+        <!--
+            相对元素自身所在的原来位置进行定位
+            可以设置 left, right, bottom, top 四个属性 可同时使用
+            效果: 原位置依旧保留占位
+            z-index属性要设置在移动元素上
+        -->
+        <div style="width: 500px; height: 500px; background-color: bisque;">
+            <div style="width: 100px; height: 100px; background-color: aqua;"></div>
+            <div style="width: 100px; height: 100px; background-color:coral; position: relative; bottom: 10px;
+            right: 10px; z-index: -10;" ></div>
+            <div style="width: 100px; height: 100px; background-color:chartreuse;"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/CSS">
+        /*
+            基本选择器1: 元素选择器
+            通过元素的名字进行定位, 它会获取页面上所有的这个元素, 无论藏的有多深
+            优先级最低
+        */
+        h1 {
+            color: red;
+        }
+        i {
+            color: aqua;
+        }
+        /* 
+            基本选择器2: 类选择器
+            应用场合: 让不同类型的标签使用相同的样式
+            优先级次之
+        */
+        .mycls {
+            color: gray;
+        }
+        /*
+            基本选择器3: id选择器
+            应用场合: 可以定位唯一的一个元素
+            优先级最高
+        */
+        #myid {
+            color: chartreuse;
+        }
+    </style>
+</head>
+    <body>
+        <h1>我是一个h1标题</h1>
+        <h1 class="mycls">我是一个h1标题</h1>
+        <h1>我是<i>一个</i>h1标题</h1>
+        <h2>我是一个h2标题</h2>
+        <h2 class="mycls">我是一个h2标题</h2>
+        <h2 id="myid">我是一个h2标题</h2>
+    </body>
+</html>
